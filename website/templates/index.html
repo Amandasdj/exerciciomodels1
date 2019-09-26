@@ -8,13 +8,22 @@
 </head>
 <body>
     <h1>Doação</h1>
-    <h3>formulário</h3>
-    <input placeholder="Nome" type="text"><input type="button" value="Enviar">
-    <input placeholder="Sobrenome" type="text"><input type="button" value="Enviar">
-    <input placeholder="data de nascimento" type="date"><input type="button" value="Enviar">
-    <input placeholder="CPF" type="text"><input type="button" value="Enviar">
-    <input placeholder="CEP" type="text"><input type="button" value="Enviar">
-    <input placeholder="Item de doação" type="text" ><input type="button" value="Enviar">
-    <a href="../templates/Sobre.html">Sobre</a>
+<form action="/" method="post">
+    {% csrf_token %}
+    <label for="">Nome</label>
+    <input nome="nome" type="text" required>
+    <label for="">Sobrenome</label>
+    <input nome="sobrenome" type="text" required>
+    <label for="">Data de nascimento</label>
+    <input nome="data_de_nascimento" type="date" required>
+    <label for="">CPF</label>
+    <input nome="cpf" type="text" required>
+    <label for="">CEP</label>
+    <input nome="cep" type="text" required>
+    <label for="">Item de doação</label>
+    <input nome="item_de_doacao" type="text" required>
+    <input type="submit" value="Enviar">
+</form>
+    <a href="index/sobre">Sobre</a>
 </body>
 </html>
